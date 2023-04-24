@@ -1,24 +1,33 @@
 # Casper Network Data Download Instructions
-This repository provides instructions on how to download the Casper network data snapshot and place it in the appropriate directory. The snapshot was taken on April 1, 2023 at 12:46:40 UTC.
+This repository provides instructions on how to download the Casper network data snapshot and place it in the appropriate directory. The snapshot was taken on 1034499.
 
 ## Requirements
 The wget command-line utility must be installed on your system.
 ## Instructions
-- Open a terminal window.
+- Stop the node launcher by running the following command:
+
+``` sudo systemctl stop casper-node-launcher ```
+
+- Install zstd by running the following command:
+
+``` sudo apt update && sudo apt install -y zstd ```
 
 - Navigate to the directory where you want to download the snapshot.
 
+``` cd /var/lib/casper/casper-node/casper  ```
+
 - Run the following command to download the snapshot:
 
-``` wget https://caspernetwork.live/casper.tar.gz ```
+``` curl -s --output - https://caspernetwork.live/db.tar.zst | zstd -d --long=31 | sudo -u casper tar xv ```
 
-- Once the download is complete, navigate to the Casper node directory:
+- Start the node launcher again by running the following command:
 
-``` cd /var/lib/casper/casper-node/ ```
-- Extract the downloaded archive by running the following command:
+``` sudo logrotate -f /etc/logrotate.d/casper-node ``` <br>
+``` sudo systemctl start casper-node-launcher; sleep 2 ```
 
-``` tar -xzf /path/to/downloaded/casper.tar.gz ``` <br>
-Note: Replace /path/to/downloaded/casper.tar.gz with the actual path to the downloaded archive.
+- Verify that the node is running properly by checking its status:
+
+``` systemctl status casper-node-launcher ```
 
 - The snapshot is now ready to use in the Casper network.
 
