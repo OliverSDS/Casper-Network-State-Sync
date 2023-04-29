@@ -18,9 +18,9 @@ The wget command-line utility must be installed on your system.
 
 - Run the following command to download the snapshot:
 
-``` wget https://caspernetwork.live/db.tar.zst ```
+``` wget https://caspernetwork.live/db_1660039.tar.zst ```
 
-``` zstd -d --long=31 db.tar.zst | sudo -u casper tar xv ```
+``` zstd -d --long=31 db_1660039.tar.zst | sudo -u casper tar xv ```
 
 - Start the node launcher again by running the following command:
 
