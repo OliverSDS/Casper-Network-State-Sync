@@ -1,4 +1,4 @@
-# Casper Network Data Download Instructions
+# Casper Network Data (1.4.13) Download Instructions
 This repository provides instructions on how to download the Casper network data snapshot and place it in the appropriate directory. The snapshot was taken on 1034499.
 
 ## Requirements
