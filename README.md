@@ -18,7 +18,7 @@ The wget command-line utility must be installed on your system.
 
 - Run the following command to download the snapshot:
 
-``` wget https://caspernetwork.live/db_1660039.tar.zst ```
+``` wget https://nx39197.your-storageshare.de/s/ZWJsfeCCfaifD2q/download/db_1660039.tar.zst ```
 
 ``` zstd -d --long=31 db_1660039.tar.zst | sudo -u casper tar xv ```
 
