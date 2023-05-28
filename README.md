@@ -1,5 +1,5 @@
 # Casper Network Data (1.4.13) Download Instructions
-This repository provides instructions on how to download the Casper network data snapshot and place it in the appropriate directory. The snapshot was taken on 1034499.
+This repository provides instructions on how to download the Casper network data snapshot and place it in the appropriate directory. The snapshot was taken on 1660039.
 
 ## Requirements
 The wget command-line utility must be installed on your system.
